@@ -1,13 +1,246 @@
-<!DOCTYPE html>
-<html lang="">
-<head>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="stylesheet" href="">
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="jquery-3.4.1.js"></script>
+    <scrpit src="script.js"></scrpit>
+    
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    
 
-<body>
+    <div class="container">
+        <div class="row">
+            <div class="square col"> 
+                <a href="#" id="castle-0" class="black1">
+                    <img id="castle" id="chess-peices" src="./img-chess-peices/castle-black.png" alt="" class="rounded chess-img">
+                </a>
+            </div>
+            <div class="square col black">
+                <a href="#" id="knight-0" class="black1">
+                    <img id="chess-peices" src="./img-chess-peices/knight-black.png" alt="" class="rounded chess-img">
+                </a>
+            </div>
+            <div class="square col"> 
+                <a href="#" id="bishop-0" class="black1">
+                    <img id = "chess-peices" src="./img-chess-peices/bishop-black.png" alt="" class="rounded chess-img">
+                </a>
+            </div>
+            <div class="square col black"> 
+                <a href="#" id="queen-0" class="black1">
+                    <img src="./img-chess-peices/queen-black.png" alt="" class="rounded chess-img">
+                </a>
+            </div>
+            <div class="square col">
+                <a href="#" id="king-0" class="black1">
+                    <img src="./img-chess-peices/king-black.png" alt="" class="rounded chess-img">
+                </a>
+            </div>
+            <div class="square col black">
+                <a href="#" id="bishop-1" class="black1">
+                    <img src="./img-chess-peices/bishop-black.png" alt="" class="rounded chess-img">
+                </a>
+            </div>
+            <div class="square col">
+                <a href="#" id="knight-1" class="black1">
+                    <img src="./img-chess-peices/knight-black.png" alt="" class="rounded chess-img">
+                </a>
+            </div>
+            <div class="square col black">
+                <a href="#" id="castle-1" class="black1">
+                    <img id="castle" src="./img-chess-peices/castle-black.png" alt="" class="rounded chess-img">
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="square col black">
+                <a href="#" id="pawn-0" class="black1">
+                    <img src="./img-chess-peices/pawn-black.png" alt="" class="rounded chess-img">
+                </a>
+            </div>
+            <div class="square col">
+                <a href="#" id="pawn-1" class="black1">
+                    <img src="./img-chess-peices/pawn-black.png" alt="" class="rounded chess-img">
+                </a>
+            </div>
+            <div class="square col black">
+                <a href="#" id="pawn-2" class="black1">
+                    <img src="./img-chess-peices/pawn-black.png" alt="" class="rounded chess-img">
+                </a>            </div>
+            <div class="square col">
+                <a href="#" id="pawn-3" class="black1">
+                    <img src="./img-chess-peices/pawn-black.png" alt="" class="rounded chess-img">
+                </a>            </div>
+            <div class="square col black">
+                <a href="#" id="pawn-4" class="black1">
+                    <img src="./img-chess-peices/pawn-black.png" alt="" class="rounded chess-img">
+                </a>
+            </div>
+            <div class="square col">
+                <a href="#" id="pawn-5" class="black1">
+                    <img src="./img-chess-peices/pawn-black.png" alt="" class="rounded chess-img">
+                </a>
+            </div>
+            <div class="square col black">
+                <a href="#" id="pawn-6" class="black1">
+                    <img src="./img-chess-peices/pawn-black.png" alt="" class="rounded chess-img">
+                </a>
+            </div>
+            <div class="square col">
+                <a href="#" id="pawn-7" class="black1">
+                    <img src="./img-chess-peices/pawn-black.png" alt="" class="rounded chess-img">
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="square col">1</div>
+            <div class="square col black">2</div>
+            <div class="square col">3</div>
+            <div class="square col black">4</div>
+            <div class="square col">5</div>
+            <div class="square col black">6</div>
+            <div class="square col">7</div>
+            <div class="square col black">8</div>
+        </div>
+        <div class="row">
+            <div class="square col black">1</div>
+            <div class="square col">2</div>
+            <div class="square col black">3</div>
+            <div class="square col">4</div>
+            <div class="square col black">5</div>
+            <div class="square col">6</div>
+            <div class="square col black">7</div>
+            <div class="square col">8</div>
+        </div>
+        <div class="row">
+            <div class="square col">1</div>
+            <div class="square col black"></div>
+            <div class="square col">3</div>
+            <div class="square col black">4</div>
+            <div class="square col">5</div>
+            <div class="square col black">6</div>
+            <div class="square col">7</div>
+            <div class="square col black">8</div>
+        </div>
+        <div class="row">
+            <div class="square col black">1</div>
+            <div class="square col">2</div>
+            <div class="square col black">3</div>
+            <div class="square col">4</div>
+            <div class="square col black">5</div>
+            <div class="square col">6</div>
+            <div class="square col black">7</div>
+            <div class="square col">8</div>
+        </div>
+        <div class="row">
+            <div class="square col">
+                <a href="#" id="pawn-b-0" class="white">
+                    <img src="./img-chess-peices/pawn.png" alt="" class="rounded chess-img">
+                </a>
+            </div>
+            <div class="square col black">
+                <a href="#" id="pawn-b-1" class="white">
+                    <img src="./img-chess-peices/pawn.png" alt="" class="rounded chess-img">
+                </a>
+            </div>
+            <div class="square col">
+                <a href="#" id="pawn-b-2" class="white">
+                    <img src="./img-chess-peices/pawn.png" alt="" class="rounded chess-img">
+                </a>
+            </div>
+            <div class="square col black">
+                <a href="#" id="pawn-b-3" class="white">
+                    <img src="./img-chess-peices/pawn.png" alt="" class="rounded chess-img">
+                </a>
+            </div>
+            <div class="square col">
+                <a href="#" id="pawn-b-4" class="white">
+                    <img src="./img-chess-peices/pawn.png" alt="" class="rounded chess-img">
+                </a>
+            </div>
+            <div class="square col black">
+                <a href="#" id="pawn-b-5" class="white">
+                    <img src="./img-chess-peices/pawn.png" alt="" class="rounded chess-img">
+                </a>
+            </div>
+            <div class="square col">
+                <a href="#" id="pawn-b-6" class="white">
+                    <img src="./img-chess-peices/pawn.png" alt="" class="rounded chess-img">
+                </a>
+            </div>
+            <div class="square col black">
+                <a href="#" id="pawn-b-7" class="white">
+                    <img src="./img-chess-peices/pawn.png" alt="" class="rounded chess-img">
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="square col black">
+                <a href="#" id="castle-b-0" class="white">
+                    <img id="castle" src="./img-chess-peices/castle.png" alt="" class="rounded chess-img">
+                </a>   
+            </div>
+            <div class="square col">
+                <a href="#" id="knight-b-0" class="white">
+                    <img src="./img-chess-peices/knight.png" alt="" class="rounded chess-img">
+                </a>    
+            </div>
+            <div class="square col black">
+                <a href="#" id="bishop-b-0" class="white">
+                    <img src="./img-chess-peices/bishop.png" alt="" class="rounded chess-img">
+                </a>
+            </div>
+            <div class="square col">
+                <a href="#" id="queen-b-0" class="white">
+                    <img src="./img-chess-peices/queen.png" alt="" class="rounded chess-img">
+                </a>    
+            </div>
+            <div class="square col black">
+                <a href="#" id="king-b-0" class="white">
+                    <img src="./img-chess-peices/king.png" alt="" class="rounded chess-img">
+                </a>    
+            </div>
+            <div class="square col">
+                <a href="#" id="bishop-b-1" class="white">
+                    <img src="./img-chess-peices/bishop.png" alt="" class="rounded chess-img">
+                </a>    
+            </div>
+            <div class="square col black">
+                <a href="#" id="knight-b-1" class="white">
+                    <img src="./img-chess-peices/knight.png" alt="" class="rounded chess-img">
+                </a>    
+            </div>
+            <div class="square col">
+                <a href="#" id="castle-b-1" class="white">
+                    <img id="castle" src="./img-chess-peices/castle.png" alt="" class="rounded chess-img">
+                </a>    
+            </div>
+        </div>
+    </div>
+    <div id="draggable" class="ui-widget-content">
+      <p>Drag me around</p>
+    </div>
     <script src="script.js"></script>
-</body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $( function() {
+            $( "#draggable" ).draggable();
+        });
+    </script>
+  </body>
 </html>

@@ -146,6 +146,13 @@ function checkNotMove(moveItem, color) {
 function eatForPawn(moveItem, color) {
     var idOfSameColor = document.getElementsByClassName(color);
     var idOfDiffColor = document.getElementsByClassName((color === 'black1') ? 'white' : 'black1');
+    for (var i = 0; i < idOfDiffColor.length; ++i) {
+        if (moveItem === idOfDiffColor[i].parentElement.id) {
+            return true;
+        }
+    };
+    
+    return false;
     
 };
 
@@ -462,30 +469,42 @@ bishop.calcMove = function (idNumber) {
 
 
 pawn.calcMove = function (idNumber) {
-    var moves=[], moveItem1, moveItem2, char1 = idNumber.charAt(0),
+    var moves=[], moveItem1, moveItem2, moveItem,char1 = idNumber.charAt(0),
         char2 = idNumber.charAt(1);
     var a = x.indexOf(char1),
         b = y.indexOf(char2);
-    if (this.colorSide === 'black1')  {
+    moveItem = (this.colorSide === 'black1') ? (x[a+1] + y[b]) : (x[a-1] + y[b]);
+    if (eatForPawn(moveItem, this.colorSide) === false) {
+        moveItem2 = moveItem;
+    } else { 
+        moveItem2 = undefined;
+    }
+    if (eatForPawn(moveItem, this.colorSide) === false) {
+        moves.push(moveItem);
+    }
+    if (this.colorSide === 'black1') {
         if (a === 1) {
-            moveItem1 = x[a+1] + y[b];
-            moves.push(moveItem1);
-            moveItem2 = x[a+2] + y[b];
-            moves.push(moveItem2);
+            moves.push(x[a+2] + y[b]);
         } else {
-            moves.push(x[a+1] + y[b]);
+            for(var i = -1; i < 2; ++i) {
+                moveItem = x[a + 1] + y[b + i];
+                if (i !== 0 && eatForPawn(moveItem, this.colorSide)) {
+                    moves.push(moveItem);
+                }
+            }
         }
     } else {
         if (a === 6) {
-            moveItem1 = x[a-1] + y[b];
-            moves.push(moveItem1);
-            moveItem2 = x[a-2] + y[b];
-            moves.push(moveItem2);
+            moves.push(x[a-2] + y[b]);
         } else {
-            moves.push(x[a-1] + y[b]);
+            for(var i = -1; i < 2; ++i) {
+                moveItem = x[a - 1] + y[b + i];
+                if (i !== 0 && eatForPawn(moveItem, this.colorSide)) {
+                    moves.push(moveItem);
+                }
+            }
         }
     }
-        
     
     this.moves = moves;
 }

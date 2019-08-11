@@ -39,11 +39,6 @@ document.body.addEventListener('click', function (e) {
             moveChess('1');
         };
     }
-
-    if (target.parentElement === 'img') {
-        console.log('a');
-        // do whatever you like ;-)
-    }
     e.stopPropagation()
 });
 
@@ -289,8 +284,8 @@ knight.calcMove = function (idNumber) {
         }
     }
     this.moves = moves;
-
 };
+
 
 queen.calcMove = function (idNumber) {
     var moves = [],
@@ -350,7 +345,6 @@ queen.calcMove = function (idNumber) {
             }
             moves.push(moveItem);
         }
-
     }
     for (var i = a + 1; i < 8; ++i) {
         moveItem = x[i] + char2;
@@ -467,7 +461,6 @@ bishop.calcMove = function (idNumber) {
     this.moves = moves;
 }
 
-
 pawn.calcMove = function (idNumber) {
     var moves=[], moveItem1, moveItem2, moveItem,char1 = idNumber.charAt(0),
         char2 = idNumber.charAt(1);
@@ -508,13 +501,6 @@ pawn.calcMove = function (idNumber) {
     
     this.moves = moves;
 }
-
-// increase a char 
-function nextChar(c, number) {
-    return String.fromCharCode(c.charCodeAt(0) + number);
-}
-nextChar('a');
-
 //function calcKnight(a, b) {
 //    for(var i = 1; i < 3; ++i) {
 //        if (a+1 <= 8 && a+1 > 0)
